@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before{
+    transition: all .3s;
+}
+.root{
+    display: none;
+}
+
+.input{
+    margin: 2em;
+    display: none;
+}
+
+.input+.root{
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.input+.root::after {
+border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 27px;
+    height: 27px;
+    background-color: white;          
+}
+
+.input+.root::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    color: black;
+    font-size: 19px;
+}
+
+.inpu:checked+.root::before {
+    content: '';
+    left: 16px;
+    right: auto;
+    color: #fff;
+}
+
+.input:checked+.root::after {
+    left: 41px;
+    background-color: #f7f7f7;
+}
+
+.input+.root {             
+    background-color: #ccc;
+}
+.input:checked+.root {
+    background-color: green;
+}
+.input:checked+.root::before {
+    color: #fff;
+}
