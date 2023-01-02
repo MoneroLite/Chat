@@ -1,7 +1,13 @@
+import { BrowserRouter } from "react-router-dom";
 import styles from "./App.module.scss";
+import AppRouter from "./routes/AppRouter";
 
-function App() {
-  return <div className={styles.app}></div>;
-}
+const App = () => {
+  return (
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
+  );
+};
 
 export default App;
