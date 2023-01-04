@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Layout } from "../../components/layout/Layout";
 import { SignIn } from "../../components/screens/index";
 import { ThemeToggle } from "../../components/ui/themeToggle/ThemeToggle";
 import { ThemeContext, themes } from "../../contexts/ThemeContext";
@@ -10,7 +11,7 @@ import { ThemeContext, themes } from "../../contexts/ThemeContext";
 
 const Main: FC = () => {
   return (
-    <div>
+    <Layout>
       <SignIn />
       <ThemeContext.Consumer>
         {({ theme, setTheme }: any) => (
@@ -23,7 +24,7 @@ const Main: FC = () => {
           />
         )}
       </ThemeContext.Consumer>
-    </div>
+    </Layout>
   );
 };
 

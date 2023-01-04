@@ -1,7 +1,8 @@
 import { FC } from "react";
+import { Layout } from "../../components/layout/Layout";
 
 const Chat: FC = () => {
-  return <div>Chat</div>;
+  return <Layout>Chat</Layout>;
 };
 
 export default Chat;
