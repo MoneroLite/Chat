@@ -19,6 +19,19 @@ const io = new Server(server, {
     }
 })
 
+io.on('connection', (socket) => {
+    socket.on('join', ({name, room}) => {
+        socket.join(room)
+
+        socket.emit('message', {
+ 
+        })
+    })
+    io.on('disconnect', () =>{
+        console.log('Disconnect io');
+    })
+ })
+
 server.listen(port, () => {
     console.log(`server is running, port ${port}`);
 })
