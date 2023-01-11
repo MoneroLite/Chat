@@ -1,4 +1,4 @@
-import Chat from "../pages/Chat/Chat";
+import Room from "../pages/Room/Room";
 import Main from "../pages/Main/Main";
 import { CHAT_ROUTE, MAIN_ROUTE } from "../utils/consts";
 
@@ -9,6 +9,6 @@ export const publicRoutes = [
   },
   {
     path: CHAT_ROUTE,
-    Component: Chat,
+    Component: Room,
   },
 ];
