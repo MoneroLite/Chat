@@ -7,7 +7,7 @@ export const ChatHeader = ({ socket, params }: any) => {
   const nav = useNavigate();
   const [roomUsers, setUsersRoom] = useState();
 
-  const onLeftRoom = (e) => {
+  const onLeaveRoom = (e) => {
     e.preventDefault();
     nav("/");
     socket.emit("leftRoom", { params });
@@ -20,10 +20,12 @@ export const ChatHeader = ({ socket, params }: any) => {
   }, []);
 
   return (
-    <div>
-      {/* <span>{params.room}</span> */}
-      <span>Пользователей: {roomUsers}</span>
-      <SubmitButton onClick={onLeftRoom}>выйти</SubmitButton>
+    <div className={styles.wrap}>
+      <span className={styles.nameRoom}>{params ? params.room : ""}</span>
+      <span className={styles.countUsers}>Пользователей: {roomUsers}</span>
+      <SubmitButton className={styles.btnLeave} onClick={onLeaveRoom}>
+        выйти
+      </SubmitButton>
     </div>
   );
 };

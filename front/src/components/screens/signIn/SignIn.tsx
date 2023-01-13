@@ -6,16 +6,29 @@ import styles from "./signIn.module.scss";
 
 export const SignIn = () => {
   const nav = useNavigate();
+
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
+
   const onClickJoin = () => {
     nav(`/chat?name=${name}&room=${room}`);
   };
+
   return (
-    <div>
-      <BasicInput value={name} onChange={(e) => setName(e.target.value)} />
-      <BasicInput value={room} onChange={(e) => setRoom(e.target.value)} />
-      <SubmitButton onClick={onClickJoin}>Войти</SubmitButton>
+    <div className={styles.signinWrap}>
+      <BasicInput
+        className={styles.inputName}
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <BasicInput
+        className={styles.inputRoom}
+        value={room}
+        onChange={(e) => setRoom(e.target.value)}
+      />
+      <SubmitButton className={styles.btnJoin} onClick={onClickJoin}>
+        Войти
+      </SubmitButton>
     </div>
   );
 };

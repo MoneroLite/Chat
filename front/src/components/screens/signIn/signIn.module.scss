@@ -1,0 +1,21 @@
+.signinWrap{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    padding: 25px;
+    margin: 0 auto;
+    margin-top: 25vh;
+}
+
+.inputName{
+    margin-bottom: 15px;
+}
+
+.inputRoom{
+    margin-bottom: 15px;
+}
+
+.btnJoin{
+    width: 150px;
+    margin: 0 auto;
+}

@@ -1,10 +1,16 @@
 import React, { FC } from "react";
-import style from "./layout.module.scss";
+import { Header } from "./header/Header";
+import styles from "./layout.module.scss";
 
 interface ILayout {
   children: React.ReactNode;
 }
 
 export const Layout: FC<ILayout> = ({ children }) => {
-  return <main>{children}</main>;
+  return (
+    <div className={styles.wrapper}>
+      <Header />
+      <main>{children}</main>
+    </div>
+  );
 };
