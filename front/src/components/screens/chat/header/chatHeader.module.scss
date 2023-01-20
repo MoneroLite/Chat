@@ -1,6 +1,9 @@
 .wrap{
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    color: var(--text-header);
+    background: var(--secondary-bgColor);
 }
 
 .nameRoom{}

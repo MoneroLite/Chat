@@ -19,12 +19,14 @@ export const Messages = ({ socket, params }: any) => {
           const className = itsMe ? styles.me : styles.user;
 
           return (
-            <MessageItem
-              key={i}
-              user={user}
-              message={message}
-              className={className}
-            />
+            <div className={styles.itemWrap}>
+              <MessageItem
+                key={i}
+                user={user}
+                message={message}
+                className={className}
+              />
+            </div>
           );
         })}
       </div>
