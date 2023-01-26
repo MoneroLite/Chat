@@ -1,5 +1,10 @@
 .wrapper{
+    height: 100vh;
     width: 1140px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.main{
+    height: calc(100% - 54px - 25px);
 }

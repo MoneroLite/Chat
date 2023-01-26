@@ -1,0 +1,20 @@
+input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--first-color);
+    padding: 10px 5px;
+    color: var(--text-header);
+    font-size: 16px;
+}
+
+input::placeholder{
+    font-size: 16px;
+}
+
+input:focus{
+    border-bottom: 1px solid var(--input-color-focus);
+}
+
+input:focus-visible{
+    outline: none;
+}

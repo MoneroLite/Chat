@@ -1,3 +1,11 @@
-.button{
+button{
+    background: var(--button-bgColor);
+    color: var(--button-textColor);
+    border: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
 
+button:hover{
+    background: var(--button-bgColor-hover);
 }

@@ -19,11 +19,13 @@ export const SignIn = () => {
       <BasicInput
         className={styles.inputName}
         value={name}
+        placeholder="Введите имя"
         onChange={(e) => setName(e.target.value)}
       />
       <BasicInput
         className={styles.inputRoom}
         value={room}
+        placeholder="Введите название комнаты"
         onChange={(e) => setRoom(e.target.value)}
       />
       <SubmitButton className={styles.btnJoin} onClick={onClickJoin}>
