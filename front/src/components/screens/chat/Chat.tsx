@@ -17,7 +17,7 @@ export const Chat: FC = () => {
     socket.emit("join", searchParams);
   }, [search]);
   return (
-    <div>
+    <div className={styles.container}>
       <ChatHeader socket={socket} params={params} />
       <Messages socket={socket} params={params} />
       <ChatFooter socket={socket} params={params} />
