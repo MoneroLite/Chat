@@ -16,13 +16,16 @@ p {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s;
   }
   
 
 :root[data-theme="light"] {
     --main-bgColor: rgb(240, 231, 219);
     --secondary-bgColor: rgb(246, 240, 232);
-    --header-background: rgb(244, 237, 228);
+    --header-background: rgb(190, 188, 184);
+
+    --first-color: rgb(50, 50, 52);
   
     --text-error: rgb(173, 7, 7);
   
@@ -30,9 +33,9 @@ p {
   
     //buttons
   
-    --button-textColor: rgb(213, 85, 164);
-    --button-bgColor: none;
-    --button-bgColor-hover: rgba(79, 209, 196, 0.7);
+    --button-textColor: rgb(26, 32, 44);
+    --button-bgColor: #5b5df7;
+    --button-bgColor-hover: #5456c6;
     --button-bgColor-hover-active: rgba(56, 178, 172, 0.7);
     //buttons
   
